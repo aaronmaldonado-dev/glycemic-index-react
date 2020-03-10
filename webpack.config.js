@@ -5,8 +5,7 @@ const HTMLWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
     entry: {
-        app: './src/pages/app.js',
-        page01: './src/pages/page01.js'
+        app: './src/app.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -44,11 +43,6 @@ module.exports = {
             filename: '../index.html',
             alwaysWriteToDisk: true,
             chunks: ['app']
-        }),
-        new HTMLWebpackPlugin({
-            template: 'src/index.html',
-            filename: '../post-job.html',
-            chunks: ['page01']
         }),
 
         new HTMLWebpackHarddiskPlugin()
